@@ -24,4 +24,4 @@ Open to roles in **AI tooling / agent infrastructure / defense-tech documentatio
 
 ## Contact
 
-[LinkedIn](https://www.linkedin.com/in/denis-shumilov/) · shumilov1999@gmail.com
+[LinkedIn](https://www.linkedin.com/in/denis-shumilov/) · shmlvofficial@gmail.com
