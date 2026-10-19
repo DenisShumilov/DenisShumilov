@@ -1,27 +1,26 @@
-# Denys Shumilov
+# Денис Шумілов (`shmlv.`)
 
-I build **evidence-first, safety-gated AI tooling**. Core thesis: **the intelligence is in the scaffold, not the model** — reliability comes from rules, roles, gates, and runtime checks around the LLM, not from the LLM itself.
+Розробляю локальні (offline) програмні комплекси для **автоматичної перевірки інженерної документації (ТУ / Паспорт / ПМВ)**, діагностики польотних логів телеметрії та цифрової обробки сигналів (**C++17 / Python / TypeScript**).
 
-## Flagship — UAV Readiness & Evidence Copilot
+Головний принцип: **надійність — в алгоритмічному каркасі перевірок, а не в генеративній моделі** (`немає доказу → заблоковано`).
 
-**[Try the live demo (10 seconds, no install)](https://denisshumilov.github.io/uav-readiness-evidence-copilot/)** · [Repo](https://github.com/DenisShumilov/uav-readiness-evidence-copilot)
+## Флагман — Інтерактивний стенд перевірки документації та телеметрії БпЛА
 
-An evidence engine for UAV / robotics documentation: it derives each claim's status from evidence instead of trusting the reviewer's label.
+👉 **[Відкрити живий інтерактивний стенд у браузері (0 байт у хмару)](https://denisshumilov.github.io/uav-readiness-evidence-copilot/)** · **[Репозиторій та код](https://github.com/DenisShumilov/uav-readiness-evidence-copilot)**
 
-- `no evidence -> locked` — and a derived cross-document contradiction blocks the verdict even when every row is hand-marked "verified" (the conflict demo scores **49/100 Blocked**)
-- Runs on your own docs: `npx github:DenisShumilov/uav-readiness-evidence-copilot check ./docs`, or as a GitHub Action with SARIF output for code scanning
-- Built by a scaffold of 10 Claude subagents, 7 skills, and a **tested runtime gate** that blocks unsafe edits — [how it was built](https://github.com/DenisShumilov/uav-readiness-evidence-copilot/blob/main/docs/scaffold.en.md)
-- Self-audits its own documentation in CI with 10 derived checks: a stale score or a missing bilingual twin fails the build
-- TypeScript monorepo · 94 tests · bilingual EN/UK · [standards crosswalk](https://github.com/DenisShumilov/uav-readiness-evidence-copilot/blob/main/docs/standards.en.md) to mil-tech documentation practice
+Локальний комплекс перехресної верифікації технічних пакетів (`.docx` / `.xlsx` / `.csv` / `.md`) та польотної телеметрії (`.bin` / `.ulg` / `.ubx` / `.nmea`):
+- **Автоматичний «Червоний олівець» до подачі на комісію (Постанова КМУ № 345 / ДСТУ ГОСТ 2.114)**: звіряє масу, частотні діапазони, температурні допуски, дальність, комплектність ЗІП та ревізії між Технічними умовами (ТУ), Паспортом виробу та Протоколом випробувань (ПМВ) менш ніж за 30 мс.
+- **Авто-вирівнювання таблиць**: знаходить числові колізії між документами (навіть коли рядки вручну позначені як «перевірено») і формує виправлений пакет за еталоном випробувань.
+- **Діагностика телеметрії та РЕБ-спуфінгу**: статистичний детектор одноантенного спуфінгу GPS за колапсом дисперсії спектра $C/N_0$, розходженням барометричної та супутникової висоти і деградацією геометрії сузір'їв + локальний санітайзер координат полігонів.
+- **TypeScript + Python stdlib ядро · 94 автоматизовані тести · 100% офлайн-робота без передачі даних у хмару**.
 
-## Also building
+## Інші R&D-розробки (`shmlv.`)
 
-**[ChainPrompt AI](https://github.com/DenisShumilov/chainprompt-ai)** — a safety-scaffolded AI copilot for DAW insert chains (C++ / VST3). Same philosophy, different domain: fail-closed gates, AI output validated against the real installed-plugin inventory, user edits preserved.
+- **[ChainPrompt AI](https://github.com/DenisShumilov/chainprompt-ai)** — детермінована система валідації сигнальних ланцюгів (C++ / VST3) із жорсткими fail-closed гейтами.
+- **Комерційні C++17 DSP-інструменти ([shmlv.com](https://shmlv.com))** — нативні процесори обробки сигналів у реальному часі (`sndwch`) та автоматизовані роботи вимірювання параметрів тракту.
 
-## Currently
+## Співпраця (Короткі B2B R&D-спринти)
 
-Open to roles in **AI tooling / agent infrastructure / defense-tech documentation & evidence systems** — especially teams in the Ukrainian and European defense-tech ecosystem.
+Працюю у форматі фіксованих інженерних спринтів (налаштування автоматичної перевірки під ваші шаблони ТУ/Паспортів/ПМВ або кастомні парсери телеметрії під NDA, 100% локальне розгортання).
 
-## Contact
-
-[LinkedIn](https://www.linkedin.com/in/denis-shumilov/) · shmlvofficial@gmail.com
+📫 **Контакти**: [LinkedIn](https://www.linkedin.com/in/denis-shumilov/) · `shmlvofficial@gmail.com`
